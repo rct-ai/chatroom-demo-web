@@ -36,17 +36,17 @@ const handleSend = async (value) => {
             @click="handleSend(question)"
             class="sendbutton"
           >
-            Send
+            发送
           </el-button>
         </div>
       </div>
     </el-tab-pane>
-    <el-tab-pane label="Send other question">
-      <div class="mx-[35px] flex flex-col h-[320px]">
+    <el-tab-pane label="其他问题">
+      <div class="mx-[35px] flex flex-col h-[280px]">
         <el-input
           type="textarea"
           :disabled="disabled"
-          placeholder="Ask a question"
+          placeholder="请输入你的问题"
           v-model="message"
           :maxlength="200"
           :show-word-limit="true"
@@ -59,7 +59,7 @@ const handleSend = async (value) => {
             @click="handleSend(message)"
             class="sendbutton"
           >
-            Send
+            发送
           </el-button>
         </div>
       </div>

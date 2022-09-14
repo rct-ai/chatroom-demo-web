@@ -123,14 +123,14 @@ const handleWsMessage = (data) => {
     })
   }
 
-  // TODO: update messageList
   handleWaitingResponse()
   handleFirstInvite()
 }
 
 const handleClickAvatar = (name) => {
-  president.visible = true
-  president.name = name
+  // 关闭人物介绍
+  // president.visible = true
+  // president.name = name
 }
 
 watch(wsConnected, (value) => {
@@ -155,7 +155,7 @@ watch(wsMessage, (value) => {
 <template>
   <div class="flex flex-col h-screen">
     <div class="header">
-      <h1 class="title">Debate by AI Presidents</h1>
+      <h1 class="title">地球危机讨论会</h1>
     </div>
     <div class="w-[1216px] mx-auto flex-1 h-full flex justify-between pt-[30px]">
       <div class="w-[358px] h-full flex flex-col gap-[50px] pb-[38px]">
@@ -172,13 +172,13 @@ watch(wsMessage, (value) => {
           <div
             class="bg-black-subtop h-[50px] text-[24px] leading-[50px] text-center font-semibold w-full"
           >
-            Audience
+            观众席
           </div>
           <div class="text-center flex-1 w-full relative">
             <div class="absolute inset-0 py-[20px] text-[13px]">
               <el-scrollbar>
                 <div v-for="user in audienceList" class="mb-[10px]">
-                  User <span class="text-primary">{{ user }}</span> entered this room
+                  观众 <span class="text-primary">{{ user }}</span> 进入了房间
                 </div>
               </el-scrollbar>
             </div>
@@ -187,7 +187,7 @@ watch(wsMessage, (value) => {
       </div>
       <div class="w-[810px] flex flex-col h-full">
         <p class="text-center pb-[12px] text-[12px]">
-          Only supports English conversation
+          仅支持中文对话
         </p>
         <!-- message -->
         <div class="relative flex-1 rounded-[7px] bg-black-body border border-primary">
@@ -220,7 +220,7 @@ watch(wsMessage, (value) => {
                 d="M20 2H8C6.897 2 6 2.897 6 4H18C19.103 4 20 4.897 20 6V14C21.103 14 22 13.103 22 12V4C22 2.897 21.103 2 20 2Z"
               />
             </svg>
-            Ask Question
+            提问
           </el-button>
           <el-dialog
             v-model="questionPanelStatus.visible"

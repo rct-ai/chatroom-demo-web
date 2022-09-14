@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { avatars } from '../utils/constants'
 
 const emit = defineEmits(['clickAvatar', 'vote'])
 const props = defineProps({
@@ -12,12 +13,6 @@ const props = defineProps({
 const dialogVisible = ref(false)
 const selected = ref('')
 const voted = ref(false)
-
-const avatars = {
-  Biden: '/Biden.png',
-  Trump: '/Trump.png',
-  Obama: '/Obama.png'
-}
 
 const handleSelect = (name) => {
   selected.value = name
@@ -33,12 +28,12 @@ const handleVote = () => {
 
 <template>
   <div
-    class="flex flex-col items-center rounded-[8px] overflow-hidden bg-black-body scoreboard"
+    class="flex flex-col items-center rounded-[8px] h-[342px] overflow-hidden bg-black-body scoreboard"
   >
     <div
       class="bg-black-subtop h-[50px] text-[24px] leading-[50px] text-center font-semibold w-full"
     >
-      Scoreboard
+      计分板
     </div>
     <div class="h-full py-4 flex gap-[20px]">
       <div
@@ -75,13 +70,13 @@ const handleVote = () => {
           d="M18 13H17.32L15.32 15H17.23L19 17H5L6.78 15H8.83L6.83 13H6L3 16V20C3 21.1 3.89 22 4.99 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V16L18 13ZM19 20H5V19H19V20ZM11.34 15.02C11.73 15.41 12.36 15.41 12.75 15.02L19.11 8.66C19.2027 8.56749 19.2763 8.4576 19.3264 8.33662C19.3766 8.21565 19.4024 8.08597 19.4024 7.955C19.4024 7.82403 19.3766 7.69435 19.3264 7.57338C19.2763 7.4524 19.2027 7.34251 19.11 7.25L14.16 2.3C14.0698 2.2056 13.9615 2.13029 13.8416 2.07853C13.7218 2.02677 13.5927 1.99961 13.4621 1.99868C13.3315 1.99775 13.2021 2.02306 13.0815 2.0731C12.9609 2.12314 12.8516 2.1969 12.76 2.29L6.39 8.66C6.2973 8.75251 6.22375 8.8624 6.17357 8.98338C6.12339 9.10435 6.09756 9.23403 6.09756 9.365C6.09756 9.49597 6.12339 9.62565 6.17357 9.74662C6.22375 9.8676 6.2973 9.97749 6.39 10.07L11.34 15.02ZM13.46 4.41L17 7.95L12.05 12.9L8.51 9.36L13.46 4.41Z"
         />
       </svg>
-      Vote Now
+      投票
     </el-button>
     <el-dialog v-model="dialogVisible" destroy-on-close>
       <div class="flex flex-col items-center gap-[35px] px-[50px]">
-        <div class="font-semibold text-[24px] leading-[31px] text-white">
+        <!-- <div class="font-semibold text-[24px] leading-[31px] text-white">
           Vote for your favorite president
-        </div>
+        </div> -->
         <div class="h-full flex gap-[30px]">
           <div
             v-for="(count, key) in voteCount"
@@ -115,7 +110,7 @@ const handleVote = () => {
               d="M18 13H17.32L15.32 15H17.23L19 17H5L6.78 15H8.83L6.83 13H6L3 16V20C3 21.1 3.89 22 4.99 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V16L18 13ZM19 20H5V19H19V20ZM11.34 15.02C11.73 15.41 12.36 15.41 12.75 15.02L19.11 8.66C19.2027 8.56749 19.2763 8.4576 19.3264 8.33662C19.3766 8.21565 19.4024 8.08597 19.4024 7.955C19.4024 7.82403 19.3766 7.69435 19.3264 7.57338C19.2763 7.4524 19.2027 7.34251 19.11 7.25L14.16 2.3C14.0698 2.2056 13.9615 2.13029 13.8416 2.07853C13.7218 2.02677 13.5927 1.99961 13.4621 1.99868C13.3315 1.99775 13.2021 2.02306 13.0815 2.0731C12.9609 2.12314 12.8516 2.1969 12.76 2.29L6.39 8.66C6.2973 8.75251 6.22375 8.8624 6.17357 8.98338C6.12339 9.10435 6.09756 9.23403 6.09756 9.365C6.09756 9.49597 6.12339 9.62565 6.17357 9.74662C6.22375 9.8676 6.2973 9.97749 6.39 10.07L11.34 15.02ZM13.46 4.41L17 7.95L12.05 12.9L8.51 9.36L13.46 4.41Z"
             />
           </svg>
-          Vote
+          投票
         </el-button>
       </div>
     </el-dialog>

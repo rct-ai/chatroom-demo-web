@@ -1,48 +1,35 @@
 export default [
   {
-    theme: 'Fighting the COVID-19',
+    theme: '太阳氦闪',
     questions: [
-      'How will you lead in the next phase of the COVID-19 crisis?',
-      "What do you think there is to learn from China's experience in the fight against the new coronavirus?"
+      '太阳发生爆炸会对地球有什么影响？',
+      '目前人类有什么办法可以阻止太阳发生氦闪？'
     ]
   },
   {
-    theme: 'Economy',
+    theme: '联合政府职能',
+    questions: ['面对太阳氦闪可能带来的灾难，政府该如何保障人们的日常所需？']
+  },
+  {
+    theme: '人类自救方案',
     questions: [
-      'What is the fastest and most aggressive solution to save the unemployed from economic hardship?',
-      'How do you see the impact of blockchain on the U.S. economy?'
+      '地球派和飞船派的计划分别是什么？你认为哪个成功可能性更大？',
+      '联合政府该如何调节地球派和飞船派之间的矛盾？'
     ]
   },
   {
-    theme: 'Education',
+    theme: '地球拯救方案',
     questions: [
-      'What does "family" mean to you?',
-      'What are your next steps for education reform?'
+      '我们目前有哪些方式拯救地球？',
+      '如果流浪地球计划失败，我们还有什么办法拯救人类文明？'
     ]
   },
   {
-    theme: 'Internation Affairs',
-    questions: [
-      'What are your plans for the next step in U.S. foreign policy?',
-      'Does the U.S. need to increase economic sanctions against China?'
-    ]
+    theme: '空间站生活',
+    questions: ['我们可以有哪些方式运送储存的空间站所需的燃料？']
   },
   {
-    theme: 'Immigration',
-    questions: ['What are your plans to reform the U.S. immigration policy?']
-  },
-  {
-    theme: 'Retirement System Reform',
-    questions: [
-      'What are your next steps for retirement system reform?',
-      'Would you consider reducing the percentage of citizens contributing to their pensions?'
-    ]
-  },
-  {
-    theme: 'Provoking Disputes',
-    questions: [
-      'Who do you think is the greatest president in American history?',
-      'Trump, in what areas do you think you are better than Biden?'
-    ]
+    theme: '地下城生活',
+    questions: ['如果发生岩浆渗入地下城，你建议人们该如何自救？']
   }
 ]

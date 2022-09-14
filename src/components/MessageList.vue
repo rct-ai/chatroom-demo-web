@@ -1,11 +1,6 @@
 <script setup>
 import { nextTick, ref, watch } from 'vue'
-
-const avatars = {
-  Biden: '/Biden.png',
-  Trump: '/Trump.png',
-  Obama: '/Obama.png'
-}
+import { avatars } from '../utils/constants'
 
 const emit = defineEmits(['clickAvatar'])
 const props = defineProps({
@@ -62,11 +57,11 @@ const enter = (el, done) => {
               class="cursor-pointer"
               @click="emit('clickAvatar', item.from)"
             >
-              <img src="/user.png" />
+              <img src="/handuoduo.png" />
             </el-avatar>
           </div>
           <div>
-            <div class="username">{{ item.from }}</div>
+            <div class="username">{{ avatars[item.from] ? item.from : '韩朵朵' }}</div>
             <div class="message">{{ item.message }}</div>
           </div>
         </div>
